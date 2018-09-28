@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Please Approve</h2>
+<mat-dialog-content>
+    <mat-form-field *ngIf="showComment">
+        <textarea matInput placeholder="Reason" [(ngModel)]="comment"></textarea>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button mat-dialog-close [mat-dialog-close]="answerYes()">Yes</button>
+  <button mat-button mat-dialog-close cdkFocusInitial [mat-dialog-close]="answerNo()">No</button>
+</mat-dialog-actions>

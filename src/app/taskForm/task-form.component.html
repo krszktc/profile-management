@@ -1,0 +1,43 @@
+
+
+<p class="request">
+    User Details
+</p>
+
+<div class="container">
+  <mat-form-field>
+    <input matInput placeholder="FIrst Name" [formControl]="firstName" required="true">
+    <mat-error *ngIf="firstName.invalid">{{getErrorMessage(firstName)}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Last Name" [formControl]="lastName">
+    <mat-error *ngIf="lastName.invalid">{{getErrorMessage(lastName)}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="E-mail" [formControl]="email" required="true">
+    <mat-error *ngIf="email.invalid">{{getErrorMessage(email, 'email')}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Id Number" [formControl]="idNumber" required="true">
+    <mat-error *ngIf="idNumber.invalid">{{getErrorMessage(idNumber, 'idNumber')}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="City" [formControl]="city">
+    <mat-error *ngIf="city.invalid">{{getErrorMessage(city)}}</mat-error>
+  </mat-form-field>
+
+
+  <div class="button-container">
+    <div class="button-row">
+      <button mat-raised-button (click)="clear()">Clear</button>
+      <button mat-raised-button color="primary" 
+              [disabled]="disableSend()" 
+              (click)="send()">Send</button>
+    </div>
+  </div>
+
+</div>

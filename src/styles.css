@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.request {
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

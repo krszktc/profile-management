@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.material-icons {
+    font-size: 50px;
+    color: black;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.menu {
+  width: 10%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content {
+    width: 90%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu {
+    margin-top: 60px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
