@@ -17,7 +17,7 @@ export class TaskForm implements OnInit {
   private city: FormControl;
 
   private EMAIL_PATTERN = /\S+@\S+\.\S+/;
-  private ID_PATTERN = /[0-9]{4}\/[0-9]{4}\/[0-9]{2}$/;
+  private ID_PATTERN = /^[0-9]{4}\/[0-9]{4}\/[0-9]{2}$/;
   private NAMES_PATTERN = /^[A-z]+$/;
   private CITY_PATTERN = /^[a-zA-Z\s]*$/;
 

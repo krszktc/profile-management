@@ -38,15 +38,15 @@ export class TaskTable implements OnInit {
 
   private getMockData(filter?: string) {
     let mockRequest: Request[];
+    this.paginator.firstPage();
     if (filter && filter !== 'ALL') {
       mockRequest = this.dataService
                         .getMockRequests()
                         .filter(el => el.status === filter);
-      this.dataSource = new MatTableDataSource<Request>(mockRequest);
     } else {
       mockRequest = this.dataService.getMockRequests();
-      this.dataSource = new MatTableDataSource<Request>(mockRequest);
     }
+    this.dataSource = new MatTableDataSource<Request>(mockRequest);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.searchFilter = '';
